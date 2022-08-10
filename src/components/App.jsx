@@ -41,10 +41,7 @@ const App = () => {
       }}
     >
       <h1>Phonebook</h1>
-      <ContactForm
-      // onSubmit={handleSubmitForm}
-      // contactNameList={contactNameList}
-      />
+      <ContactForm />
       <h2>Contacts</h2>
       <FilterContacts onFilterChange={handleFilterChange} />
       <ContactList

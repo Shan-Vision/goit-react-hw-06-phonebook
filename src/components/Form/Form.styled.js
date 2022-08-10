@@ -19,7 +19,7 @@ export const Input = styled.input`
   height: 40px;
   border-radius: 4px;
   outline: none;
-  border: 2px solid greenyellow;
+  border: 2px solid black;
   font-size: 16px;
   font-family: inherit;
   :hover,
