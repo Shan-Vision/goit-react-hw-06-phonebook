@@ -1,17 +1,21 @@
 import { FilterBox, FilterLabel, FilterInput } from './FilterContacts.styled';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { filterByName } from 'redux/contactsSlice';
 
-function FilterContacts({ onFilterChange }) {
+function FilterContacts() {
+  const dispatch = useDispatch();
+
+  const onChange = event => {
+    const value = event.target.value;
+    dispatch(filterByName(value));
+  };
+
   return (
     <FilterBox>
       <FilterLabel>Find contacts by name</FilterLabel>
-      <FilterInput onChange={onFilterChange} />
+      <FilterInput onChange={onChange} />
     </FilterBox>
   );
 }
-
-FilterContacts.propTypes = {
-  onFilterChange: PropTypes.func.isRequired,
-};
 
 export default FilterContacts;
